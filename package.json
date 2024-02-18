@@ -1,0 +1,44 @@
+{
+  "name": "@ethsign/",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthSign"
+  },
+  "scripts": {
+    "clean": "forge clean && hardhat clean && rm -rf cache_hardhat",
+    "build": "forge build",
+    "build:hh": "hardhat compile",
+    "lint:sol": "forge fmt --check && solhint {script,src,test}/**/*.sol",
+    "prettier:check": "prettier --check **/*.{json,md,yml} --ignore-path=.prettierignore",
+    "prettier:write": "prettier --write **/*.{json,md,yml} --ignore-path=.prettierignore",
+    "test": "forge test",
+    "test:coverage": "forge coverage",
+    "test:gas": "forge test --gas-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "5.0.1",
+    "@openzeppelin/contracts-upgradeable": "5.0.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.4",
+    "@nomicfoundation/hardhat-viem": "^1.0.4",
+    "@openzeppelin/hardhat-upgrades": "^3.0.3",
+    "@types/node": ">=16.0.0",
+    "dotenv": "^16.4.4",
+    "ds-test": "github:dapphub/ds-test",
+    "forge-std": "github:foundry-rs/forge-std#v1",
+    "hardhat": "^2.20.1",
+    "hardhat-deploy": "^0.11.45",
+    "solhint": "^4.1.1",
+    "solidity-docgen": "0.6.0-beta.36",
+    "ts-node": ">=8.0.0",
+    "typescript": "~5.0.4",
+    "viem": "^1.15.1"
+  }
+}
