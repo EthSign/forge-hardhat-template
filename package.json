@@ -6,11 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/EthSign"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "forge fmt --check && solhint {script,src,test}/**/*.sol"
-    }
-  },
   "scripts": {
     "prepare": "husky",
     "clean": "forge clean && hardhat clean && rm -rf cache_hardhat",
