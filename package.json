@@ -25,10 +25,8 @@
     "@openzeppelin/contracts-upgradeable": "5.0.1"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
     "@nomicfoundation/hardhat-foundry": "^1.1.1",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "@nomicfoundation/hardhat-verify": "^2.0.4",
     "@openzeppelin/hardhat-upgrades": "^3.0.3",
     "@types/node": ">=16.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
