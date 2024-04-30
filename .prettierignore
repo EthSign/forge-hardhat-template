@@ -6,6 +6,8 @@ node_modules
 out
 deployments
 typechain-types
+artifacts
+cache_forge
 
 # files
 *.env
