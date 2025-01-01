@@ -2,8 +2,8 @@
 // solhint-disable no-empty-blocks
 pragma solidity ^0.8.13;
 
-import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import { UUPSUpgradeable } from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 contract CounterUpgradeable is OwnableUpgradeable, UUPSUpgradeable {
     uint256 public number;
@@ -12,7 +12,7 @@ contract CounterUpgradeable is OwnableUpgradeable, UUPSUpgradeable {
         __Ownable_init(_msgSender());
     }
 
-    function setNumber(uint256 newNumber) public onlyOwner() {
+    function setNumber(uint256 newNumber) public onlyOwner {
         number = newNumber;
     }
 
@@ -20,5 +20,5 @@ contract CounterUpgradeable is OwnableUpgradeable, UUPSUpgradeable {
         number++;
     }
 
-    function _authorizeUpgrade(address newImplementation) internal override onlyOwner() {}
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner { }
 }
