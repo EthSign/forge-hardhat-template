@@ -22,6 +22,8 @@ jobs:
 
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
+
+      - name: Install NPM Dependencies
         run: bun i
 
       - name: Install Foundry
