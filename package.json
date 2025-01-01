@@ -1,11 +1,40 @@
 {
-  "name": "tokentable-sell-now-evm",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "name": "@ethsign/forge-hardhat-template",
+  "version": "2.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthSign/forge-hardhat-template"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "scripts": {
+    "clean": "forge clean && hardhat clean && rm -rf cache_hardhat",
+    "build": "forge build && hardhat compile",
+    "build:hh": "hardhat compile",
+    "lint:sol": "forge fmt --check && solhint {script,src,test}/**/*.sol",
+    "prettier:check": "prettier --check **/*.{json,md,yml} --ignore-path=.prettierignore",
+    "prettier:write": "prettier --write **/*.{json,md,yml} --ignore-path=.prettierignore",
+    "test": "forge test",
+    "test:coverage": "forge coverage"
+  },
+  "author": "jxu@ethsign.xyz",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "5.1.0",
+    "@openzeppelin/contracts-upgradeable": "5.1.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.3",
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "@openzeppelin/hardhat-upgrades": "^3.8.0",
+    "@types/bun": "latest",
+    "ethers": "^6.13.4",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.17",
+    "hardhat-deploy": "^0.14.0",
+    "prettier": "^3.4.2",
+    "solhint": "^5.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }
